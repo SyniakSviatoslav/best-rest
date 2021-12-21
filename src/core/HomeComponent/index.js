@@ -1,4 +1,7 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
+import { registerPath } from "../../constants";
+import logo from "../../assets/logo.svg"
 
 class HomeComponent extends React.Component {
     constructor(props) {
@@ -11,8 +14,12 @@ class HomeComponent extends React.Component {
 
     render() {
         return (
-            <div>
-              Home
+            <div id="home-wrapper">
+               <img src={logo} alt="Logo" />
+               <div> Find the best place to rest while traveling</div>
+              <NavLink to={registerPath}>
+                  <button className="registerButton"> Registration</button>
+              </NavLink>
             </div>
         );
     }
